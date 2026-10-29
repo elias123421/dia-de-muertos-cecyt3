@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de Muertos - CECyT 3 IPN</title>
+    <style>
+        :root {
+            --cempasuchil: #ff7700;
+            --morado: #4a154b;
+            --negro: #121212;
+            --gris-oscuro: #1e1e1e;
+            --blanco: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--morado);
+            color: var(--cempasuchil);
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 4px solid var(--cempasuchil);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            color: var(--blanco);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            background-color: var(--gris-oscuro);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--cempasuchil);
+        }
+
+        h2 {
+            color: var(--cempasuchil);
+            margin-top: 0;
+        }
+
+        .interactive-box {
+            background-color: #2a2a2a;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .btn-interactive {
+            background-color: var(--cempasuchil);
+            color: var(--negro);
+            border: none;
+            padding: 0.7rem 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            margin: 0.5rem;
+            transition: 0.2s;
+        }
+
+        .btn-interactive:hover {
+            background-color: #e06600;
+        }
+
+        #info-display {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #ffd000;
+            min-height: 2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--morado);
+            color: var(--blanco);
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Día de Muertos en el IPN</h1>
+        <p>Tradición, Historia y Cultura en el CECyT 3 "Estanislao Ramírez Ruiz"</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>¿Por qué se festeja el Día de Muertos?</h2>
+            <p>El Día de Muertos es una tradición mexicana que celebra el retorno transitorio de las ánimas de los
+                difuntos a casa, para convivir con los familiares y nutrirse de la esencia de los alimentos que se les
+                ofrecen en los altares.</p>
+            <p>Su origen es el resultado del mestizaje entre las celebraciones religiosas católicas traídas por los
+                españoles y la conmemoración del día de muertos que realizaban los pueblos indígenas desde la época
+                prehispánica.</p>
+        </section>
+
+        <section>
+            <h2>¿Cómo se festejaba antes? (Época Prehispánica)</h2>
+            <p>Antes de la llegada de los españoles, etnias como los Mexicas concebían la muerte como el inicio de un
+                viaje hacia el <strong>Mictlán</strong> (el reino de los muertos). El viaje duraba cuatro días y los
+                difuntos debían atravesar nueve niveles sorteando diversos obstáculos.</p>
+            <ul>
+                <li><strong>Rituales:</strong> No se celebraba en noviembre; se dedicaban meses completos al culto a los
+                    muertos.</li>
+                <li><strong>Ofrendas antiguas:</strong> Se enterraba a los muertos con pertenencias, comida, agua y
+                    perros Xoloitzcuintles para guiar su camino.</li>
+                <li><strong>Transformación:</strong> Con la llegada del cristianismo, la festividad se fusionó con el
+                    Día de Todos los Santos y Fieles Difuntos (1 y 2 de noviembre).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Día de Muertos en el IPN y CECyT 3</h2>
+            <p>En el Instituto Politécnico Nacional, esta fecha preserva la identidad nacional integrando la creatividad
+                estudiantil:</p>
+            <ul>
+                <li><strong>Ofrendas y Tradición:</strong> Se realizan montajes de altares dedicados a personajes
+                    ilustres de la ciencia, la técnica y la historia de México.</li>
+                <li><strong>Comunidad en el CECyT 3:</strong> En nuestro plantel "Estanislao Ramírez Ruiz", la comunidad
+                    técnica participa en concursos de ofrendas, caracterización de catrines y actividades culturales que
+                    unen la tradición con la innovación tecnológica.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Elementos del Altar (Interactivo)</h2>
+            <p>Haz clic en los elementos para conocer su significado en la ofrenda:</p>
+            <div class="interactive-box">
+                <button class="btn-interactive" onclick="mostrarInfo('cempasuchil')">Cempasúchil</button>
+                <button class="btn-interactive" onclick="mostrarInfo('veladora')">Veladoras</button>
+                <button class="btn-interactive" onclick="mostrarInfo('pan')">Pan de Muerto</button>
+                <button class="btn-interactive" onclick="mostrarInfo('papel')">Papel Picado</button>
+                <button class="btn-interactive" onclick="mostrarInfo('calaverita')">Calaveritas</button>
+
+                <p id="info-display">Selecciona un elemento arriba para ver su significado.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto elaborado por alumnos del <strong>5IM9</strong> | Carrera: <strong>Técnico en Sistemas
+                Digitales</strong></p>
+        <p>CECyT 3 "Estanislao Ramírez Ruiz" - IPN</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
